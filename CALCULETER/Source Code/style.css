@@ -1,0 +1,120 @@
+:root {
+    --num-Box-BG: black;
+    --num-Box-TC: white;
+    --num-Box-Hov: rgb(0, 183, 255);
+    --opr-Box-BG: rgb(106, 255, 106);
+    --opr-Box-TC: black;
+    --border-Color: black;
+    --result-BG: rgb(187, 187, 187);
+}
+
+html {
+    font-size: 75%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.calculeter {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border: 2px solid var(--border-Color);
+    justify-self: center;
+    width: fit-content;
+
+    padding: 2rem;
+    margin: 2rem 1rem;
+}
+
+.keys {
+    display: flex;
+    border: 2px solid var(--border-Color);
+}
+
+.result {
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    font-size: 5rem;
+    border: 2px solid var(--border-Color);
+    background-color: var(--result-BG);
+}
+
+.numbers {
+    display: flex;
+    white-space: pre-wrap;
+    flex-wrap: wrap;
+    width: 26rem;
+
+}
+
+.num-Box {
+    padding: 2rem 2.5rem;
+    font-size: 2rem;
+    margin: 1rem;
+    border: 2px solid var(--border-Color);
+
+    background-color: var(--num-Box-BG);
+    color: var(--num-Box-TC);
+}
+
+.num-Box:hover {
+    background-color: var(--num-Box-Hov);
+}
+
+.opr-Box {
+    padding: 2rem 2.5rem;
+    font-size: 2rem;
+    margin: 1rem;
+    border: 2px solid var(--border-Color);
+
+    background-color: var(--opr-Box-BG);
+    color: var(--opr-Box-TC);
+}
+
+.opretors {
+    display: flex;
+    flex-flow: column;
+    font-size: 3rem;
+}
+
+.reset {
+    padding: 2rem 1rem;
+}
+
+.num-zero {
+    color: var(--num-Box-TC);
+    background-color: var(--num-Box-BG);
+}
+
+.equal,
+.reset {
+    background-color: var(--opr-Box-BG);
+    color: var(--opr-Box-TC);
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 40%;
+    }
+}
